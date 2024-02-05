@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Page History Extension",
+  "description": "Page History Extension",
+  "version": "1.0",
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "permissions": [
+    "sidePanel",
+    "webNavigation",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  }
+}
